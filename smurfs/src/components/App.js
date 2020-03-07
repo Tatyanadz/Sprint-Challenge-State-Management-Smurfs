@@ -1,16 +1,32 @@
-import React, { Component } from "react";
-import "./App.css";
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Welcome to your state management version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
-      </div>
-    );
+import React from "react";
+import SmurfList from "./SmurfList";
+import SmurfForm from "./SmurfForm";
+import styled from "styled-components";
+
+const AppDiv = styled.div`
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: white;
+  margin: 0;
+  padding-bottom: 5%;
+  font-size: 1 em;
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    padding-top: 4%;
   }
+`;
+
+
+function App() {
+  return (
+    <AppDiv>
+      <h1>Smurfs</h1>
+      <SmurfForm />
+      <SmurfList />
+    </AppDiv>
+  );
 }
 
 export default App;
+
